@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+.vscode
+result/*
+state_inconsistency/
+crytic-export/
+/test
+/manual*
+/test_crytic
+/result

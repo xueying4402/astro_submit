@@ -1,0 +1,73 @@
+digraph  {
+"BlockID: 0
+Call context: 
+None
+ENTRY_POINT
+EXPRESSION:None	NodeType.ENTRYPOINT" [shape=box];
+"BlockID: 4
+Call context: 
+None
+_owner(address) := newOwner(address)
+EXPRESSION:OwnershipTransferred(_owner,newOwner)	NodeType.EXPRESSION
+_owner = newOwner	NodeType.EXPRESSION";
+"BlockID: 1
+Call context: 
+None
+TMP_77 = CONVERT 0 to address
+TMP_78(bool) = newOwner != TMP_77
+CONDITION TMP_78
+EXPRESSION:TMP_78(bool) = newOwner != TMP_77	NodeType.IF";
+"BlockID: 2
+Call context: 
+True
+TMP_79(None) = SOLIDITY_CALL revert()()
+EXPRESSION:revert()()	ExtraNodeType.REVERT";
+"BlockID: 3
+Call context: 
+False
+END_IF
+EXPRESSION:None	NodeType.ENDIF";
+"BlockID: 0
+Call context: 
+None
+ENTRY_POINT
+EXPRESSION:None	NodeType.ENTRYPOINT" -> "BlockID: 1
+Call context: 
+None
+TMP_77 = CONVERT 0 to address
+TMP_78(bool) = newOwner != TMP_77
+CONDITION TMP_78
+EXPRESSION:TMP_78(bool) = newOwner != TMP_77	NodeType.IF"  [key=0];
+"BlockID: 1
+Call context: 
+None
+TMP_77 = CONVERT 0 to address
+TMP_78(bool) = newOwner != TMP_77
+CONDITION TMP_78
+EXPRESSION:TMP_78(bool) = newOwner != TMP_77	NodeType.IF" -> "BlockID: 2
+Call context: 
+True
+TMP_79(None) = SOLIDITY_CALL revert()()
+EXPRESSION:revert()()	ExtraNodeType.REVERT"  [key=0];
+"BlockID: 1
+Call context: 
+None
+TMP_77 = CONVERT 0 to address
+TMP_78(bool) = newOwner != TMP_77
+CONDITION TMP_78
+EXPRESSION:TMP_78(bool) = newOwner != TMP_77	NodeType.IF" -> "BlockID: 3
+Call context: 
+False
+END_IF
+EXPRESSION:None	NodeType.ENDIF"  [key=0];
+"BlockID: 3
+Call context: 
+False
+END_IF
+EXPRESSION:None	NodeType.ENDIF" -> "BlockID: 4
+Call context: 
+None
+_owner(address) := newOwner(address)
+EXPRESSION:OwnershipTransferred(_owner,newOwner)	NodeType.EXPRESSION
+_owner = newOwner	NodeType.EXPRESSION"  [key=0];
+}

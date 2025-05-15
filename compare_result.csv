@@ -1,0 +1,9 @@
+{
+    "case_result/ROIToken0xe48b75dc1b131fd3a8364b0580f76efd04cf6e9c/transferOwnership(address)_wfg.dot": {
+        "case_result/0x0a0b34fc24b6a3477abc354eea9c9d8ae2c32132-Reputation/transferOwnership(address)_wfg.dot": {
+            "result": true,
+            "useful result": 0.902,
+            "another result": 0.603
+        }
+    }
+}
